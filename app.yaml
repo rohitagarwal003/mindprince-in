@@ -28,10 +28,14 @@ handlers:
 # These are for redirecting requests for
 # www.mindprince.in/blog to blog.mindprince.in
 # www.mindprince.in/notes to notes.mindprince.in
-- url: /blog
+- url: /blog(/.*)?
   script: subdomain.app
-- url: /notes
+- url: /notes(/.*)?
   script: subdomain.app
+# With the above regular expression,
+# the following are handled by subdomain.py
+# /blog, /blog/, /blog/anything
+# /notes, /notes/, /notes/anything
 
 # All other URLs use the main.py script.
 # This app is using WSGI instead of CGI.
