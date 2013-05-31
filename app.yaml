@@ -15,6 +15,10 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /
+  static_files: index.html
+  upload: index\.html
+
 # The following is static *directory* handler.
 # All of the files in the given directory are
 # uploaded as static files.
