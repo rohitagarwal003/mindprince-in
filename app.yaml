@@ -5,13 +5,35 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+
+# The following is static *file* handler.
+# You need to specify which files to upload
+# because url can contain regexes and thus
+# handler cannot determine which files to
+# upload.
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: .*
+# The following is static *directory* handler.
+# All of the files in the given directory are
+# uploaded as static files.
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /images
+  static_dir: images
+
+- url: /js
+  static_dir: js
+
+# All other URLs use the main.py script.
+# This app is using WSGI instead of CGI.
+- url: /.*
   script: main.app
 
 libraries:
 - name: webapp2
-  version: "2.5.2"
+  version: latest
+- name: jinja2
+  version: latest
