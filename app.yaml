@@ -20,12 +20,18 @@ handlers:
 # uploaded as static files.
 - url: /stylesheets
   static_dir: stylesheets
-
 - url: /images
   static_dir: images
-
 - url: /js
   static_dir: js
+
+# These are for redirecting requests for
+# www.mindprince.in/blog to blog.mindprince.in
+# www.mindprince.in/notes to notes.mindprince.in
+- url: /blog
+  script: subdomain.app
+- url: /notes
+  script: subdomain.app
 
 # All other URLs use the main.py script.
 # This app is using WSGI instead of CGI.
