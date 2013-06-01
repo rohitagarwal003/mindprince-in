@@ -6,7 +6,7 @@ threadsafe: yes
 
 handlers:
 
-# The following is static *file* handler.
+# The following are static *file* handlers.
 # You need to specify which files to upload
 # because url can contain regexes and thus
 # handler cannot determine which files to
@@ -19,7 +19,7 @@ handlers:
   static_files: index.html
   upload: index\.html
 
-# The following is static *directory* handler.
+# The following are static *directory* handlers.
 # All of the files in the given directory are
 # uploaded as static files.
 - url: /stylesheets

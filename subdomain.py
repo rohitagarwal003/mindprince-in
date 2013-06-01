@@ -10,7 +10,7 @@ app = webapp2.WSGIApplication([
     ('/(blog)/(.*)', Redirect),
     ('/(notes)/(.*)', Redirect),
     ('/(.*)', Redirect),
-], debug=True)
+], debug=False)
 
 # Notes on routing
 # /blog matches the third rule.
