@@ -1,0 +1,9 @@
+dispatch:
+- url: "rohitagarwal.org/*"
+  service: default
+- url: "www.rohitagarwal.org/*"
+  service: default
+- url: "mindprince.in/*"
+  service: redirect
+- url: "www.mindprince.in/*"
+  service: redirect
