@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import os
-
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):

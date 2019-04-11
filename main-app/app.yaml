@@ -17,16 +17,6 @@ handlers:
   static_files: index.html
   upload: index\.html
 
-# The following are static *directory* handlers.
-# All of the files in the given directory are
-# uploaded as static files.
-- url: /stylesheets
-  static_dir: stylesheets
-- url: /images
-  static_dir: images
-- url: /js
-  static_dir: js
-
 # All other URLs use the main.py script.
 # This app is using WSGI instead of CGI.
 - url: /.*
