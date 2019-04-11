@@ -1,0 +1,17 @@
+service: redirect
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+
+# All URLs use the redirect.py script.
+# This app is using WSGI instead of CGI.
+- url: /.*
+  script: redirect.app
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
