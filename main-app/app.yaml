@@ -13,17 +13,20 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
   secure: always
+  redirect_http_response_code: 301
 
 - url: /
   static_files: index.html
   upload: index\.html
   secure: always
+  redirect_http_response_code: 301
 
 # All other URLs use the main.py script.
 # This app is using WSGI instead of CGI.
 - url: /.*
   script: main.app
   secure: always
+  redirect_http_response_code: 301
 
 libraries:
 - name: webapp2
