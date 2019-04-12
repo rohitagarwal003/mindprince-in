@@ -3,9 +3,9 @@
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        self.redirect("https://www.rohitagarwal.org/")
+    def get(self, path):
+        self.redirect("https://www.rohitagarwal.org/" + path)
 
 app = webapp2.WSGIApplication([
-    ('/.*', MainHandler),
+    ('/(.*)', MainHandler),
 ], debug=False)
