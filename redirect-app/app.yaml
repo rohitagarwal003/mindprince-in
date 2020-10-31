@@ -1,17 +1,11 @@
 service: redirect
-runtime: python27
-api_version: 1
-threadsafe: yes
+runtime: go114
 
 handlers:
-
-# All URLs use the redirect.py script.
-# This app is using WSGI instead of CGI.
+# The only accepted value for the script element is auto because all
+# traffic is served using the entrypoint command.
 - url: /.*
-  script: redirect.app
+  script: auto
 
-libraries:
-- name: webapp2
-  version: latest
-- name: jinja2
-  version: latest
+automatic_scaling:
+  max_instances: 1
