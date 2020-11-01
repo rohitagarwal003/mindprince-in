@@ -23,8 +23,8 @@ handlers:
 # traffic is served using the entrypoint command.
 - url: /.*
   script: auto
-  secure: always
-  redirect_http_response_code: 301
+  # No need to redirect to https here because the handler anyway
+  # redirects to the https URL.
 
 automatic_scaling:
   max_instances: 1
