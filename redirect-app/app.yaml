@@ -1,5 +1,5 @@
 service: redirect
-runtime: go114
+runtime: go123
 
 handlers:
 # The only accepted value for the script element is auto because all
